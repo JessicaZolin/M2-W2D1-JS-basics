@@ -1,12 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-basics</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <section>
+
+        <!-- ESERCIZIO 1
+        Scrivi un algoritmo per trovare il più grande tra due numeri interi. -->
+
+        <div class="esercizio">
+            <h3>Qual'è il numero maggiore? </h3>
+            <div class="insertDati">
+                <label>inserisci il primo numero</label>
+                <input type="text" id="number1">
+            </div>
+            <div class="insertDati">
+                <label>inserisci il secondo numero</label>
+                <input type="text" id="number2">
+            </div>
+            <button onclick="ilPiuGrande ()">
+                <h4>controlla</h4>
+            </button>
+            <div id="divVuoto1" class="risposta"></div>
+        </div>
+
+
+        <!-- ESERCIZIO 2
+        Crea un blocco condizionale if/else per mostrare in console 
+        il messaggio corretto in ogni condizione. 
+        num < 5 - mostra in console "Tiny"
+        num < 10 - mostra in console "Small"
+        num < 15 - mostra in console "Medium"
+        num < 20 - mostra in console "Large"
+        num >= 20 - mostra in console "Huge" -->
+
+
+        <div class="esercizio">
+            <h3>Che messaggio uscirà? </h3>
+            <div class="insertDati">
+                <label>inserisci un numero</label>
+                <input type="text" id="number3">
+            </div>
+            <button onclick="messaggio ()">
+                <h4>clicami</h4>
+            </button>
+            <div id="divVuoto2" class="risposta"></div>
+        </div>
+
+
+        <!-- ESERCIZIO 11
+        Scrivi un ciclo in JavaScript per iterare da 0 a 15. 
+        Per ciascun elemento, il ciclo deve controllare the il valore corrente sia pari o dispari, 
+        e mostrare il risultato in console. -->
+
+
+        <div class="esercizio">
+            <h3>Quali sono i numeri pari e dispari da 0 a 15? </h3>
+            <button onclick="pariDispari ()">
+                <h4>clicami</h4>
+            </button>
+            <div id="divVuoto4" class="risposta"></div>
+        </div>
+
+
+        <!-- ESERCIZIO 1 EXTRA
+        Scrivi un algoritmo per verificare che, dati due numeri interi, 
+        il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8. -->
+
+        <div class="esercizio">
+            <h3>E' uno dei due nuemeri o la loro somma/sottrazione uguale a 8? </h3>
+            <div class="insertDati">
+                <label>inserisci il primo numero</label>
+                <input type="text" id="number6">
+            </div>
+            <div class="insertDati">
+                <label>inserisci il secondo numero</label>
+                <input type="text" id="number7">
+            </div>
+            <button onclick="verifica ()">
+                <h4>controlla</h4>
+            </button>
+            <div id="divVuoto5" class="risposta"></div>
+        </div>
+
+
+        <!-- ESERCIZIO 2 EXTRA
+        Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello 
+        dell'utente in una variabile "totalShoppingCart".
+        C'è una promozione in corso: se il totale del carrello supera 50, 
+        l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
+        Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout. -->
+
+        <div class="esercizio">
+            <h3>Quanl'è il totale del carrello? </h3>
+            <div id="oggetti">
+                <div class="contenitoreImg">
+                    <img src="https://m.media-amazon.com/images/I/71m55kyeJDL._AC_SL1500_.jpg"
+                        alt="modellino macchina racing">
+                    <p>40€</p>
+                </div>
+                <div class="contenitoreImg">
+                    <img src="https://th.bing.com/th/id/OIP.1mJ5zilsUzhxd7OHVQSH3AHaHa?rs=1&pid=ImgDetMain"
+                        alt="colori a tempera giotto">
+                    <p>28€</p>
+                </div>
+                <div class="contenitoreImg">
+                    <img src="https://www.leprofumeriegaetano.it/wp-content/uploads/2022/12/pupazzo-peluche-stitch.jpg"
+                        alt="pupazzo stitch">
+                    <p>30€</p>
+                </div>
+            </div>
+            <div class="insertDati">
+                <label>inserisci il prezzo di un primo articolo</label>
+                <input type="text" id="number8">
+            </div>
+            <div class="insertDati">
+                <label>inserisci il prezzo di un secondo articolo</label>
+                <input type="text" id="number9">
+            </div>
+            <p><b>10 € di spedizione, gratuita sopra i 50€.</b></p>
+            <button onclick="carrello ()">
+                <h4>totale carrello</h4>
+            </button>
+            <div id="divVuoto6" class="risposta"></div>
+        </div>
+
+
+        <!-- ESERCIZIO 3 EXTRA
+        Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
+        Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, 
+        determinando, usando l'algoritmo del codice precedente, 
+        se le spedizioni siano gratuite oppure no e e calcolando il totale. -->
+
+        <div class="esercizio">
+            <h3>Quanl'è il totale del carrello con lo sconto del20% per il Black Friday?</h3>
+            <div id="oggetti">
+                <div class="contenitoreImg">
+                    <img src="https://m.media-amazon.com/images/I/71m55kyeJDL._AC_SL1500_.jpg"
+                        alt="modellino macchina racing">
+                    <p>40€</p>
+                </div>
+                <div class="contenitoreImg">
+                    <img src="https://th.bing.com/th/id/OIP.1mJ5zilsUzhxd7OHVQSH3AHaHa?rs=1&pid=ImgDetMain"
+                        alt="colori a tempera giotto">
+                    <p>28€</p>
+                </div>
+                <div class="contenitoreImg">
+                    <img src="https://www.leprofumeriegaetano.it/wp-content/uploads/2022/12/pupazzo-peluche-stitch.jpg"
+                        alt="pupazzo stitch">
+                    <p>30€</p>
+                </div>
+            </div>
+            <div class="insertDati">
+                <label>inserisci il prezzo di un primo articolo</label>
+                <input type="text" id="number10">
+            </div>
+            <div class="insertDati">
+                <label>inserisci il prezzo di un secondo articolo</label>
+                <input type="text" id="number11">
+            </div>
+            <p><b>10 € di spedizione, gratuita sopra i 50€.</b></p>
+            <button onclick="carrello2 ()">
+                <h4>totale carrello</h4>
+            </button>
+            <div id="divVuoto7" class="risposta"></div>
+        </div>
+
+
+
+
+    </section>
+
 </body>
 <script src="S2P1-scaricabile.js"></script>
+
 </html>

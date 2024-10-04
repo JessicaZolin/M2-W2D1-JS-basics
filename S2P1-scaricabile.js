@@ -17,6 +17,25 @@ else {
 }
 
 
+/* --------- CON INTERAZIONE HTML --------- */
+
+
+function ilPiuGrande () {
+  let number1 = parseInt(document.getElementById("number1").value);
+  let number2 = parseInt(document.getElementById("number2").value);
+  let maggiore = 0;
+  let divVuoto1 = document.getElementById("divVuoto");
+
+  if (number1 > number2) {
+    maggiore = number1 + " è più rande di " + number2;
+  } else if (number1 < number2) {
+    maggiore = number2 + " è più grande di " + number1;
+  } else {
+    maggiore = "I due numeri sono uguali"
+  }
+
+  divVuoto1.innerHTML = "<h4>" + maggiore + "</h4>"
+}
 
 
 /*
@@ -32,18 +51,18 @@ ESERCIZIO 2
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let num = 15
+let num3 = 15
 
-if (num < 5) {
+if (num3 < 5) {
   console.log("Tiny")
 }
- else if (num < 10) {
+ else if (num3 < 10) {
   console.log("Small")
 }
-else if (num < 15) {
+else if (num3 < 15) {
   console.log("Medium")
 }
-else if (num < 20) {
+else if (num3 < 20) {
   console.log("Large")
 }
 else {
@@ -51,6 +70,27 @@ else {
 }
 
 
+/* --------- CON INTERAZIONE HTML --------- */
+
+function messaggio () {
+  let number3 = parseInt(document.getElementById("number3").value);
+  let messaggio = 0;
+  let divVuoto2 = document.getElementById("divVuoto2");
+
+  if (number3 < 5) {
+    messaggio = "Tiny"
+  } else if (number3 < 10) {
+    messaggio = "Small"
+  } else if (number3 < 15) {
+    messaggio = "Medium"
+  } else if (number3 < 20) {
+    messaggio = "Large"
+  } else {
+    messaggio = "Huge"
+  }
+
+  divVuoto2.innerHTML = "<h4>" + messaggio + "</h4>"  
+}
 
 
 //ESERCIZI SUI CICLI: 
@@ -61,13 +101,12 @@ else {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-for (let num = 0; num < 11; num++) {
-  if (num === 3 || num === 8) {
+for (let num4 = 0; num4 < 11; num4++) {
+  if (num4 === 3 || num4 === 8) {
     continue;
-  } else { console.log(num) 
+  } else { console.log(num4) 
   }
 }
-
 
 
 
@@ -77,12 +116,27 @@ for (let num = 0; num < 11; num++) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-for (let num = 0; num < 16; num++) {
-  if (num % 2 !== 1) {
-    console.log(num+" è un numero pari")
-  }else {console.log(num+" è un numero dispari")}
+for (let num5 = 0; num5 < 16; num5++) {
+  if (num5 % 2 !== 1) {
+    console.log(num5+" è un numero pari")
+  }else {console.log(num5+" è un numero dispari")}
 }
 
+
+/* --------- CON INTERAZIONE HTML --------- */
+
+function pariDispari () {
+  let pariDispari = "";
+  let divVuoto4 = document.getElementById("divVuoto4");
+  for (let i = 0; i < 16; i++){
+    if(i%2 === 0) {
+      pariDispari += "<h4>" + i + " è un numero pari</h4>"
+    } else {
+      pariDispari += "<h4>" + i + " è un numero dispari</h4>"
+    }
+  }
+  divVuoto4.innerHTML = pariDispari
+}
 
 
 
@@ -94,14 +148,28 @@ for (let num = 0; num < 16; num++) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let num3 = 4;
-let num4 = 12;
+let num6 = 4;
+let num7 = 12;
 
-if (num3 === 8 || num4 === 8 || num3 + num4 === 8 || num3 - num4 === 8) {
+if (num6 === 8 || num7 === 8 || num6 + num7 === 8 || num6 - num7 === 8 || num7 - num6 === 8) {
   console.log("uno dei due valori, oppure la loro somma/sottrazione è uguale a 8")
 } else { console.log("nessuno dei due valori e nemmeno la loro somma/sottrazione è uguale è 8")
 }
 
+
+/* --------- CON INTERAZIONE HTML --------- */
+
+function verifica () {
+  let number6 = parseInt(document.getElementById("number6").value);
+  let number7 = parseInt(document.getElementById("number7").value);
+  let verifica = 0;
+  let divVuoto5 = document.getElementById("divVuoto5");
+  if (number6 === 8 || number7 === 8 || number6 + number7 === 8 || number6 - number7 === 8 || number7 - number6 === 8) {
+    verifica = "<h4>Uno dei due valori oppure la loro somma/sottrazione è uguale a 8</h4>"
+  } else { verifica = "<h4>Nessuno dei due valori e nemmeno la loro somma/sottrazione è uguale a 8</h4>"
+  }
+  divVuoto5.innerHTML = verifica
+}
 
 
 
@@ -113,16 +181,32 @@ Crea un algoritmo che determini l'ammontare totale che deve essere addebitato al
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let totalShippingCart = 40;
+let totalShoppingCart = 50;
 let spedizione = 10;
 
-if (totalShippingCart > 50) {
-  console.log("L'ammontare da addebitare al cliente è pari a " + totalShippingCart)
+if (totalShoppingCart > 50) {
+  console.log("L'ammontare della tua spesa è pari a " + totalShoppingCart)
 } else {
-  totalShippingCart = totalShippingCart + spedizione
-  console.log ("L'ammontare da addebitare al cliente è pari a " + totalShippingCart)
+  totalShoppingCart = totalShoppingCart + spedizione
+  console.log ("L'ammontare della tua spesa è pari a " + totalShoppingCart)
 }
 
+
+/* --------- CON INTERAZIONE HTML --------- */
+
+function carrello () {
+  let number8 = parseInt(document.getElementById("number8").value);
+  let number9 = parseInt(document.getElementById("number9").value);
+  let divVuoto6 = document.getElementById("divVuoto6");
+  let spedizione = 10;
+  let totalShoppingCartA = number8 + number9
+  if (totalShoppingCartA > 50) {
+    totalShoppingCartA = "<h4>il totale del carrello è pari a " + totalShoppingCartA + "€</h4>"
+  } else {
+    totalShoppingCartA = "<h4>il totale del carrello è pari a " + (totalShoppingCartA + spedizione) + "€</h4>"
+  }
+  divVuoto6.innerHTML = totalShoppingCartA
+}
 
 
 
@@ -133,18 +217,36 @@ if (totalShippingCart > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let totalShippingCart2 = 50;
-let spedizione2 = 10;
+totalShoppingCart = 50;
 let sconto = 20/100;
-let totalShippingCart3 = totalShippingCart2 - (totalShippingCart2 * sconto)
 
-if (totalShippingCart3 > 50) {
-  console.log("L'ammontare da addebitare al cliente è pari a " + totalShippingCart3)
+totalShoppingCart = totalShoppingCart - (totalShoppingCart * sconto)
+
+if (totalShoppingCart > 50) {
+  console.log("L'ammontare della tua spesa è pari a " + totalShoppingCart)
 } else {
-  totalShippingCart3 = totalShippingCart3 + spedizione
-  console.log ("L'ammontare da addebitare al cliente è pari a " + totalShippingCart3)
+
+  totalShoppingCart = totalShoppingCart + spedizione
+  console.log ("L'ammontare da addebitare al cliente è pari a " + totalShoppingCart)
 }
 
+
+/* --------- CON INTERAZIONE HTML --------- */
+
+function carrello2 () {
+  let number10 = parseInt(document.getElementById("number10").value);
+  let number11 = parseInt(document.getElementById("number11").value);
+  let divVuoto7 = document.getElementById("divVuoto7");
+  let spedizione = 10;
+  let sconto = 0.8
+  let totalShoppingCartB = (number10 + number11) * sconto
+  if (totalShoppingCartB > 50) {
+    totalShoppingCartB = "<h4>il totale del carrello è pari a " + totalShoppingCartB + "€</h4>"
+  } else {
+    totalShoppingCartB = "<h4>il totale del carrello è pari a " + (totalShoppingCartB + spedizione) + "€</h4>"
+  }
+  divVuoto7.innerHTML = totalShoppingCartB
+}
 
 
 
@@ -168,14 +270,14 @@ let isMale = true ? console.log(gender = "male") : console.log(gender = "female"
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-for (let num5 = 1; num5 < 101; num5++) {
-  if (num5%3 === 0 && num5%5 === 0) {
+for (let num8 = 1; num8 < 101; num8++) {
+  if (num8 % 3 === 0 && num8 % 5 === 0) {
     console.log("FizzBuzz")
-  } else if (num5%3 === 0) {
+  } else if (num8 % 3 === 0) {
     console.log("Fizz")
-  } else if (num5%5 === 0) {
+  } else if (num8 % 5 === 0) {
     console.log("Buzz")
   }else {
-    console.log(num5)
+    console.log(num8)
   }
 }
